@@ -1,3 +1,5 @@
+package com.jarvis.carmarket.model;
+
 public enum Region {
     R1("Asia"),
     R2("Europe"),
@@ -14,14 +16,5 @@ public enum Region {
 
     public String getLabel() {
         return label;
-    }
-
-    public static Region fromCode(String code) {
-        for (Region r : values()) {
-            if (r.name().equalsIgnoreCase(code.trim())) {
-                return r;
-            }
-        }
-        throw new IllegalArgumentException("Unknown region code: " + code);
     }
 }
